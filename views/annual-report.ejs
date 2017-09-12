@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>CalcRoll</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="../stylesheets/global.css">
+    <link rel="stylesheet" href="../stylesheets/reports.css">
+</head>
+    <body>
+        <div class="wrapper">
+
+            <% include templates/header.ejs %>
+
+            <div class="report">
+                <div class="filter">
+                    <form action="/user/annual-report/filter" method="post">
+                        <label>
+                            year:
+                            <input id="year" name="year" type="number" min="2016" max="2030" required value="<%= currentYear %>">
+                        </label>
+                        <input id="show" type="submit" value="show">
+                    </form>
+                </div>
+                <hr>
+                <div class="results">
+                    <p id="message"><%= msg %></p>
+                    <% if (yearData) { %>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>month</td>
+                                    <td>days</td>   
+                                    <td>total hours</td>
+                                    <td>hours 100%</td>
+                                    <td>hours 125%</td>
+                                    <td>hours 150%</td>
+                                    <td>payment</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <% for(var i = 1; i <= 12; i++) { %>
+                                <tr>
+                                    <td><%= i %></td>
+                                    <td><%= yearData[i].days.toFixed(2) %></td>
+                                    <td><%= yearData[i].totalHours.toFixed(2) %></td>
+                                    <td><%= yearData[i].hours100.toFixed(2) %></td>
+                                    <td><%= yearData[i].hours125.toFixed(2) %></td>
+                                    <td><%= yearData[i].hours150.toFixed(2) %></td>
+                                    <td><%= yearData[i].payment.toFixed(2) %></td>
+                                </tr> 
+                            <% }; %>
+                            <tr style="font-weight:bolder;">
+                                <td>total</td>
+                                <td><%= total.days.toFixed(2) %></td>
+                                <td><%= total.hours.toFixed(2) %></td>
+                                <td><%= total.hours100.toFixed(2) %></td>
+                                <td><%= total.hours125.toFixed(2) %></td>
+                                <td><%= total.hours150.toFixed(2) %></td>
+                                <td><%= total.payment.toFixed(2) %></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+            
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="../javascripts/global.js"></script>
+        <script src="../javascripts/annualReport.js"></script>
+    </body>  
+</html>

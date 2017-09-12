@@ -1,0 +1,34 @@
+.statistics{
+    padding: 30px;
+}
+.charts{
+    display: inline-block;
+    width: 48%;
+    margin: 10px;
+}
+.c3-axis-x-label, .c3-axis-y-label{
+    font-size: 16px;
+}
+h2{
+    text-align: center;
+    margin: 20px 0;
+    color: #02293c;
+    font-size: 2em;
+}
+hr{
+    margin: 30px 0px;
+}
+
+@media screen and (max-width: 1000px) {
+    .charts{
+        display: block;
+        width: 100%;
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .c3-axis-x{
+        font-size: 1.8vw;
+    }
+}

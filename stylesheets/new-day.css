@@ -1,0 +1,53 @@
+.new-day{
+    font-size: 2em;
+}
+.new-day > p {
+    margin: 10px;
+}
+.info{
+    text-align: center;
+    padding: 15px;
+    margin: 30px;
+    border: 1px solid #bbd5ea;
+}
+.info #date{
+    display: inline-block;
+    border: 1px;
+    border-bottom: 2px solid #a2d5ff;
+    color: #130374;
+}
+.info .instruction{
+    margin-top: 15px;
+    color: #1C3C5F;
+}
+.insert-data{
+    margin: 30px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #bbd5ea;
+}
+.data-item{
+    display: inline-block;
+    width: 200px;   
+    margin: 3%;
+    padding: 10px;
+    border: 1px solid #e3e4f4;
+    color: #04061c;
+}
+.insert-data label input{
+    float: right;
+    width: 50px;
+    text-align: center;
+    margin-top: 4px;
+    vertical-align: middle;
+}
+.data-item .btn{
+    width: 48%;
+    cursor: pointer;
+    border: none;
+    background-color: #c0cddb;
+    transition: background-color 1.2s;
+    font: unset; 
+}
+.data-item .btn:hover{
+    background-color: #6fa2db;
+}

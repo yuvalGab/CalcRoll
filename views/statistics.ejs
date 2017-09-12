@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>CalcRoll</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="../stylesheets/global.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css">
+    <link rel="stylesheet" href="../stylesheets/statistics.css">
+</head>
+    <body>
+        <div class="wrapper">
+
+            <% include templates/header.ejs %>
+
+            <div class="statistics">
+                <div id="months-payment-data" data-months-payment="<%= monthsData.map(function(doc) {return doc.totalPayment}); %>"></div>
+                <div id="months-days-data" data-months-days="<%= monthsData.map(function(doc) {return doc.totalDays}); %>"></div>
+                <div id="years-payment-data" data-years-payment="<%= yearsData.map(function(doc) {return doc.totalPayment}); %>"></div>
+                <div id="years-days-data" data-years-days="<%= yearsData.map(function(doc) {return doc.totalDays}); %>"></div>
+                <h2>present year statistics</h2>
+                <div class="charts" id="chart1"></div>
+                <div class="charts" id="chart2"></div>
+                <hr>
+                <h2>all time statistics</h2>
+                <div class="charts" id="chart3"></div>
+                <div class="charts" id="chart4"></div>
+            </div>
+            
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js"></script>  
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.min.js"></script>
+        <script src="../javascripts/global.js"></script>
+        <script src="../javascripts/statistics.js"></script>
+    </body>  
+</html>

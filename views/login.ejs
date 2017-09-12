@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>CalcRoll</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="stylesheets/global.css">
+    <link rel="stylesheet" href="stylesheets/login.css">
+</head>
+    <body>
+        <div class="wrapper">
+            <h1 id="label">CalcRoll</h1>
+            <div class="login">
+                <form action="/login/connect" method="post">
+                    <input class="field" name="email" type="email" placeholder="email">
+                    <input class="field" name="password" type="password" placeholder="password">
+                    <input class="login-btn" type="submit" value="login">
+                </form>
+                <p>create a new account</p>
+            </div>
+            <div class="new-account">
+                <form action="/login/new-account" method="post">
+                    <input class="field" name="new_email" type="email" placeholder="email">
+                    <input class="field" name="new_password" type="password" placeholder="password">
+                    <input class="login-btn" type="submit" value="create">
+                </form>
+            </div>
+            <p id="message"><%= msg %></p>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="javascripts/global.js"></script>
+        <script src="javascripts/login.js"></script>
+    </body>  
+</html>

@@ -1,0 +1,73 @@
+.login{
+    max-width: 500px;
+    border: 1px solid #d1d7ec;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 25px 30px 20px 30px;
+}
+input{
+    font-size: 1.6em;
+    margin-top: 20px;
+}
+.field{
+    width: 191px;
+    border: 1px solid #c6cce3;
+    color: #092485;
+    transition: border-color 1s;
+}
+.field:hover{
+    border-color: #001358;
+}
+.login-btn{
+    border: none;
+    cursor: pointer;
+    background-color: #c2dee5;
+    transition: background-color 1.5s;
+    color: #001358;
+}
+.login-btn:hover{
+    background-color: #82cddf;
+}
+.login p{
+    display: inline-block;
+    font-size: 1.8em;
+    cursor: pointer;
+    margin-top: 30px;
+    color: #5fb1c5;
+    transition:  color 1s;
+}
+.login p:hover{
+    color: #001358;
+}
+.new-account{
+    display: none;
+    max-width: 500px;
+    border: 1px solid #d1d7ec;
+    border-top: unset;
+    margin: 0 auto;
+    padding: 30px;
+}
+#message{
+    text-align: center;
+    color: #001358;
+    font-size: 1.6em;
+}
+
+@media screen and (max-width: 1000px) {
+    .wrapper{
+        padding-top: 40px;
+        padding-bottom: 100px;
+        text-align: center;
+    }
+    .login{
+        margin-top: 30px;
+    }
+    #label{
+        display: block;
+    }
+    .login-btn{
+        display: block;
+        margin: 0 auto;  
+        margin-top: 20px;
+    }
+}
